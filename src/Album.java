@@ -19,7 +19,9 @@ public class Album {
 
 //     A function to check if a song exists in the list
     public Song checkExistSong(Song s){
+
         for (Song song : songs) {
+            System.out.println(s);
             if(song.getTitle().equals(s.getTitle())){
                 return song;
             }
@@ -31,6 +33,7 @@ public class Album {
 
     boolean addSong(Song s){
 //        Check if the song already exists
+
         if(checkExistSong(s) == null){
             songs.add(s);
             System.out.println(s.getTitle() + "Successfully Added");
